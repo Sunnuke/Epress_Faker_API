@@ -1,5 +1,7 @@
 import Express from "express";
 import Faker from "faker";
+const express = require("express");
+const app = express();
 
 class User {
     constructor() {
@@ -25,3 +27,16 @@ class Company {
         }
     }
 }
+
+
+app.get("/api/users/new", () => {
+    return console.log(new User());
+});
+
+app.get("/api/companies/new", () => {
+    return console.log(new Company());
+});
+
+app.get("/api/user/company", () => {
+    return console.log(new User(), new Company());
+});
