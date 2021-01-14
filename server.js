@@ -1,5 +1,3 @@
-import Express from "express";
-import Faker from "faker";
 const express = require("express");
 const app = express();
 
@@ -40,3 +38,5 @@ app.get("/api/companies/new", () => {
 app.get("/api/user/company", () => {
     return console.log(new User(), new Company());
 });
+
+app.listen( 8000, () => console.log(`Listening on port: ${8000}`) );
