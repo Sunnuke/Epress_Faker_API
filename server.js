@@ -12,3 +12,16 @@ class User {
     }
 }
 
+class Company {
+    constructor() {
+        this._id = Faker.random.number();
+        this.name = Faker.company.companyName();
+        this.address = {
+            street: Faker.address.streetName(),
+            city: Faker.address.city(),
+            state: Faker.address.state(),
+            zipCode: Faker.address.zipCodeByState(),
+            country: Faker.address.country()
+        }
+    }
+}
